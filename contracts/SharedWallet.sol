@@ -2,18 +2,22 @@
 
 pragma solidity 0.8.1;
 
-contract SharedWallet {
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 
-    address public owner;
+contract SharedWallet is Ownable {
 
-    // MODIFIERS
-    modifier onlyOwner() {
-        require(msg.sender == owner, "You're not the owner, fool!");
-        _;
-    }
+    // address public owner; // REMOVED TO USE OPENZEPPELIN CONTRACT INSTEAD
 
-    constructor() public{
-        owner = msg.sender;
+    // REMOVED TO USE OPENZEPPELIN CONTRACT INSTEAD
+    // constructor() public{
+    //     owner = msg.sender;
+    // }
+
+    /**
+     * @dev verification if the owner is the owner
+     */
+    function isOwner() internal view returns(bool) {
+        return owner() == msg.sender;
     }
 
     function withdrawMoney(address payable _to, uint _amount) public onlyOwner {
