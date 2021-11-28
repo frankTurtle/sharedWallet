@@ -1,4 +1,4 @@
-# sharedWallet
+# SharedWallet
 
 Shared wallet with an allowance functionality
 
