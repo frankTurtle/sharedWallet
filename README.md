@@ -12,12 +12,12 @@ Shared wallet with an allowance functionality
 
 ### Goals
 
-❌ - 👛Have an on-chain wallet smart contract.
+✅ - 👛Have an on-chain wallet smart contract.
 
-❌ -💸 This wallet contract can store funds and let users withdraw again.
+✅ -💸 This wallet contract can store funds and let users withdraw again.
 
-❌ -✌️ You can also give "allowance" to other, specific user-addresses.
+✅ -✌️ You can also give "allowance" to other, specific user-addresses.
 
-❌ -🚫 Restrict the functions to specific user-roles (owner, user)
+✅ -🚫 Restrict the functions to specific user-roles (owner, user)
 
-❌ -🔍 Re-Use existing smart contracts which are already audited to the greatest extent
+✅ -🔍 Re-Use existing smart contracts which are already audited to the greatest extent
